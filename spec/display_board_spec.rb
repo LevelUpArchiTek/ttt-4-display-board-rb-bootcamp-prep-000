@@ -184,7 +184,7 @@ describe "#display_board in 'lib/display_board.rb" do
       # example's situation.
 
       # *** Comment the line below by adding a # at the line start ***
-      board = ["O", "O", "O", "O", "O", "O", "O", "O", "O"] # This is not correct
+      board = ["O", "O", "O", "O", "O", "O", "X", "O", "O"] # This is not correct
 
       output = capture_puts{ display_board(board) } #if defined?(display_board)
       rows = output.split("\n")
@@ -193,7 +193,7 @@ describe "#display_board in 'lib/display_board.rb" do
        expect(rows[1]).to eq("-----------")
        expect(rows[2]).to eq(" O | O | O ")
        expect(rows[3]).to eq("-----------")
-       expect(rows[4]).to eq(" O | O | O ")
+       expect(rows[4]).to eq(" X | O | O ")
 
       expect(true).to be(true)
     end
