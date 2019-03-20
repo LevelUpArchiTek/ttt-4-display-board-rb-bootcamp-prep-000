@@ -148,7 +148,7 @@ describe "#display_board in 'lib/display_board.rb" do
       board = ["X", "X", "X", "X", "X", "X", "X", "X", "X"] # This is not correct
 
       # Don't touch the following lines.
-      output = capture_puts{ display_board(board) } if defined?(display_board)
+      output = capture_puts{ display_board(board) } #if defined?(display_board)
       rows = output.split("\n")
 
       # Each line that starts with expect represents a row in the ouput.
@@ -186,7 +186,7 @@ describe "#display_board in 'lib/display_board.rb" do
       # *** Comment the line below by adding a # at the line start ***
       board = ["O", "O", "O", "O", "O", "O", "O", "O", "O"] # This is not correct
 
-      output = capture_puts{ display_board(board) } if defined?(display_board)
+      output = capture_puts{ display_board(board) } #if defined?(display_board)
       rows = output.split("\n")
 
        expect(rows[0]).to eq(" O | O | O ")
